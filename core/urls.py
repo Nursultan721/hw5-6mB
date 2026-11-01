@@ -9,6 +9,7 @@ from core.yasg import urlpatterns_yasg
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("api/v1/", include("apps.testapp.urls")),
     path('', include(urlpatterns_yasg)),
     path("ckeditor5/", include('django_ckeditor_5.urls')),
 ]
